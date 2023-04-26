@@ -32,15 +32,15 @@ public class EmployeeService {
 		return employeeRepo.count();
 	}
 
-	public Employee insert(Employee student) {
-		return employeeRepo.save(student);
+	public Employee insert(Employee employee) {
+		return employeeRepo.save(employee);
 	}
 
-	public Employee update(Employee student) {
-		Employee updated = getById(student.getId());
-		updated.setFirstName(student.getFirstName());
-		updated.setLastName(student.getLastName());
-		updated.setEmail(student.getEmail());
+	public Employee update(Employee employee) {
+		Employee updated = getById(employee.getId());
+		updated.setFirstName(employee.getFirstName());
+		updated.setLastName(employee.getLastName());
+		updated.setEmail(employee.getEmail());
 		return employeeRepo.save(updated);
 	}
 
